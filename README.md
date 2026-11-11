@@ -1,6 +1,10 @@
 # Old-God-Toe
-
-> Jogo da velha em 3D, com um clima sombrio.
+<div align="center">
+<img src="https://img.itch.zone/aW1hZ2UvMjgyODAwNy8xNjg5NDU0Ny5wbmc=/347x500/ukYDvx.png" height="128">
+<img src="https://img.itch.zone/aW1hZ2UvMjgyODAwNy8xNjg5NDU0OS5wbmc=/347x500/tAML3i.png" height="128">
+<img src="https://img.itch.zone/aW1hZ2UvMjgyODAwNy8xNjg5NDU0OC5wbmc=/347x500/h9scOw.png" height="128">
+<img src="https://img.itch.zone/aW1hZ2UvMjgyODAwNy8xNjg5NDU1Ni5wbmc=/347x500/SroAAm.png" height="128">
+</div>
 
 O jogo foi feito para testar os recursos da Godot Engine e o suporte a Mono (C#), e também para conseguir terminar um jogo com 90% das features que eu tinha planejado. O gameplay é um jogo da velha em 3D. Tem tutorial em slides, multiplayer, uma IA básica, personalização de perfil e configurações de partida.
 
