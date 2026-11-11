@@ -1,0 +1,18 @@
+"This is the first thing you should see if you move around abit (WASD+Mouse). Quite a troublesome sight for the simple mind to fathom, don't you think?"//game1//2
+"On the top you'll see some text describing the state of the game. Right now it is Player(1)'s turn as indicated by the text and the small prism besides his Points tally."//game2//2
+"The enclosed icon besides the player Points represent what marker the player will place, either X or O as is the case in Tic-Tac-Toe."//game3//2
+"When we click/touch the screen while looking at one of the boxes, the box will be highlighted and a preview of winnable plays will appear as these "false projections" of a marker."//game4//2
+"Here's how it looks from another angle, see how if you filled all these boxes in this order, you would win?"//game5//2
+"On the top right, a counter of winnable plays will change when you select a box."//game6//2
+"You can cycle through these plays by pressing C (Next) or Z (Back) and the projections will also change in position."//game7//2
+"You can also make the projection to your enemy's markers, no markers or your own marker by pressing X. Notice how the Play counter turns red? Pay attention to that so you don't mistake your enemy's markers for your own!"//game8//2
+"The X markers are represented by the warrior beasts of Tekali."//game9//2
+"While the O markers are represented by the putrid demons of Oferii."//game10//2
+"Unfortunately, the faith of the Voidtree isn't popular enough with the youngins to warrant markers of our own. Neither is the Greater Sun but who cares about those unmedicated pseudo-intellectuals?"////2
+"Back on topic. Player(1) places a marker by confirming his selection (Enter) and it is now Player(0)'s turn. The box will be automatically selected on the new turn and a green prism will be placed on the box where the marker was placed for future reference..."//game11//0
+"...The projections will automatically change to the enemy player's marker type, further indicated by the play counter flashing red, so PAY ATTENTION TO THAT FIRST! The "turn prism" will also move beside Player(0)'s Points tally since it's now his turn."//game11//0
+"Here Player(0) selects another box and cycles through the types of markers until he reaches his own."//game12//2
+"Now Player(0) confirms his selection and a new turn begins. Notice the changing elements."//game13//2
+"After a few turns, when someone manages to form a straight set of markers from one edge of the cube to another, then a point will be awarded to the respective player if it wasn't a tied game."//game14//2
+"2 other things. Holding CTRL locks your camera and allows you to move your mouse around. And trying to select empty space will make the selection effects vanish."////2
+"You can always come back here if you didn't understand something. Until then..."////2

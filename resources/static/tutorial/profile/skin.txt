@@ -1,0 +1,2 @@
+"Here you can change your faith and your liturgical vestments. From top to bottom we have the Tekali faith, the Oferii faith, the Voidtree faith (my personal favorite) and the Greater Sun faith."//office_skin1//0
+"Just select one of them once you made up your mind. You can always change it of course but I wouldn't recommend it... confuses the mind."//office_skin2//2

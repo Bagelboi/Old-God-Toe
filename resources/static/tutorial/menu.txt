@@ -1,0 +1,3 @@
+"This button opens up a menu so that you can configure a game and then choose the modality of play."//main1//2
+"This button leads you to your personal office, with all your achievements and fine suits."//main2//2
+"This button opens up your personal settings menu along with a list of all the keyboard controls."//main3//2

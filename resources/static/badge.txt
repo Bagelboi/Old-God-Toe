@@ -1,0 +1,10 @@
+Lamb,,,
+Zealot,bzealot,5,1
+Disciple,bdisciple,10,5
+Priest,bpriest,20,10
+High Priest,bhipriest,40,20
+Oracle,boracle,80,40
+Transcendant Soul,bsoul,160,80
+Lesser Demigod,bdemiless,240,160
+Greater Demigod,bdemigreat,480,320
+Old God,boldgod,960,640

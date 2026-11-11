@@ -1,0 +1,14 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://do3o4px0sd63n"]
+
+[ext_resource type="Texture2D" uid="uid://mhq44ob454sx" path="res://resources/2d/light.png" id="1_vrmab"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adnx7"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_is_srgb = true
+albedo_texture = ExtResource("1_vrmab")
+
+[resource]
+material = SubResource("StandardMaterial3D_adnx7")
+size = Vector2(5, 5)

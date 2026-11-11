@@ -1,0 +1,27 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=5 format=3 uid="uid://bfsri26lrhsxa"]
+
+[sub_resource type="Curve" id="Curve_2se74"]
+_data = [Vector2(0, 0.131868), 0.0, -0.01964, 0, 0, Vector2(1, 0), -0.553846, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_kwai3"]
+max_value = 86.33
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.940476, 6.64076), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_h8c5t"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_ff542"]
+curve_x = SubResource("Curve_2se74")
+curve_y = SubResource("Curve_kwai3")
+curve_z = SubResource("Curve_h8c5t")
+
+[resource]
+direction = Vector3(0, -1, 0)
+spread = 83.572
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+gravity = Vector3(0, -2, 0)
+scale_curve = SubResource("CurveXYZTexture_ff542")

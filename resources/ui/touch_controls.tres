@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://45ijovprrtvl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_junu7"]
+bg_color = Color(0.839216, 0.839216, 0.839216, 0.705882)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.839216, 0.839216, 0.839216, 0.705882)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qe41"]
+bg_color = Color(0.898039, 0.898039, 0.898039, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.898039, 0.898039, 0.898039, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.635294, 0.635294, 0.635294, 1)
+Button/font_sizes/font_size = 22
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = SubResource("StyleBoxFlat_junu7")
+Button/styles/pressed = SubResource("StyleBoxFlat_6qe41")

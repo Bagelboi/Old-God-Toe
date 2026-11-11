@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5m7e4n3fnfmm"]
+
+[ext_resource type="Script" path="res://scripts/utils/UpnpHelper.cs" id="1_h0f1f"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_0aahp"]
+script/source = "using Godot;
+using System;
+
+public partial class upnptest : Node3D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+	
+	private void _on_delete_button_up() {
+		GetNode<UpnpHelper>(\"upnp\").QueueFree();
+	}
+	
+	private void _on_getip_button_up()
+	{
+		GetNode<UpnpHelper>(\"upnp\").getExternalIP();
+	}
+
+}
+
+
+
+"
+
+[node name="Node3D" type="Node3D"]
+script = SubResource("CSharpScript_0aahp")
+
+[node name="delete" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "delete"
+
+[node name="getip" type="Button" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_right = 57.0
+offset_bottom = 15.5
+grow_vertical = 2
+text = "delete"
+
+[node name="upnp" type="Node" parent="."]
+script = ExtResource("1_h0f1f")
+
+[connection signal="button_up" from="delete" to="." method="_on_delete_button_up"]
+[connection signal="button_up" from="getip" to="." method="_on_getip_button_up"]

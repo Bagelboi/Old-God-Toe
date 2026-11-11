@@ -1,0 +1,301 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcyox1ab7r8cc"]
+
+[ext_resource type="Texture2D" uid="uid://v3w1qpllundb" path="res://resources/ui/background.jpg" id="1_3yoy7"]
+[ext_resource type="Script" path="res://scenes/Menu.cs" id="1_31aaq"]
+[ext_resource type="Theme" uid="uid://d1a8l161uisdy" path="res://resources/ui/menu_theme.tres" id="1_gnx86"]
+[ext_resource type="Theme" uid="uid://dv4vv5y6aon4o" path="res://resources/ui/old_godeme.tres" id="2_sgmtw"]
+[ext_resource type="Texture2D" uid="uid://bv7x5jki5k7of" path="res://resources/ui/treefiend.png" id="3_6rlcx"]
+[ext_resource type="Texture2D" uid="uid://dh21tkmxm8888" path="res://resources/2d/tutorial/yenna.png" id="6_g5vkc"]
+[ext_resource type="PackedScene" uid="uid://i6h3fvuoehro" path="res://scenes/objects/setting_options.tscn" id="7_ncqyr"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gnx86")
+script = ExtResource("1_31aaq")
+
+[node name="Vortex" type="TextureRect" parent="."]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3yoy7")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.282118
+anchor_top = 0.226852
+anchor_right = 0.717882
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_sgmtw")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer"]
+modulate = Color(0.894118, 0.917647, 0.819608, 1)
+layout_mode = 2
+texture = ExtResource("3_6rlcx")
+expand_mode = 2
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.458
+anchor_top = 0.212
+anchor_right = 0.458
+anchor_bottom = 0.212
+offset_right = 57.0
+offset_bottom = 31.0
+text = "PLAY"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.584
+anchor_top = 0.377
+anchor_right = 0.593
+anchor_bottom = 0.377
+offset_right = 57.0
+offset_bottom = 31.0
+text = "QUIT"
+
+[node name="UserButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.252
+anchor_top = 0.475
+anchor_right = 0.333
+anchor_bottom = 0.475
+text = "the
+abyssal
+office"
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.661
+anchor_top = 0.871
+anchor_right = 0.678
+anchor_bottom = 0.92
+text = "SETTINGS"
+
+[node name="PlayOptions" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.188
+anchor_top = 0.082
+anchor_right = 0.85
+anchor_bottom = 0.95
+offset_left = 0.480011
+offset_top = -0.360001
+offset_right = -29.76
+offset_bottom = -0.496033
+size_flags_horizontal = 0
+
+[node name="Container" type="VBoxContainer" parent="PlayOptions"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="Close" type="Button" parent="PlayOptions/Container"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 40
+text = "X"
+
+[node name="BoxAmountLabel" type="Label" parent="PlayOptions/Container"]
+layout_mode = 2
+text = "Box Amount"
+
+[node name="BoxAmountSlider" type="HSlider" parent="PlayOptions/Container"]
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Amounts of boxes/squares per axis. Total is equal to Box Amount ^ 3"
+min_value = 3.0
+max_value = 33.0
+step = 2.0
+value = 3.0
+tick_count = 12
+
+[node name="Label3" type="Label" parent="PlayOptions/Container"]
+layout_mode = 2
+text = "Player Count"
+
+[node name="PlayerCountOptions" type="OptionButton" parent="PlayOptions/Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label5" type="Label" parent="PlayOptions/Container"]
+layout_mode = 2
+text = "CPU count"
+
+[node name="BotCountOptions" type="OptionButton" parent="PlayOptions/Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_text = "Amount of computer controlled players. Takes up a player slot."
+
+[node name="Label4" type="Label" parent="PlayOptions/Container"]
+layout_mode = 2
+text = "Online"
+
+[node name="Online" type="VBoxContainer" parent="PlayOptions/Container"]
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="PlayOptions/Container/Online"]
+layout_mode = 2
+text = "UPNP"
+
+[node name="UpnpOptions" type="OptionButton" parent="PlayOptions/Container/Online"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label4" type="Label" parent="PlayOptions/Container/Online"]
+layout_mode = 2
+text = "IPV4/IPV6 Address"
+
+[node name="TextIP" type="TextEdit" parent="PlayOptions/Container/Online"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 3
+text = "127.0.0.1"
+
+[node name="Label5" type="Label" parent="PlayOptions/Container/Online"]
+layout_mode = 2
+text = "Port"
+
+[node name="TextPort" type="TextEdit" parent="PlayOptions/Container/Online"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 3
+text = "8080"
+
+[node name="Label" type="Label" parent="PlayOptions/Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play"
+
+[node name="Style" type="GridContainer" parent="PlayOptions/Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
+
+[node name="Local" type="Button" parent="PlayOptions/Container/Style"]
+layout_mode = 2
+tooltip_text = "Play locally with your friends"
+text = "LOCAL PLAY"
+
+[node name="CPU" type="Button" parent="PlayOptions/Container/Style"]
+layout_mode = 2
+tooltip_text = "Play against CPU (with friends optionally)"
+text = "VS CPU"
+
+[node name="Host" type="Button" parent="PlayOptions/Container/Style"]
+layout_mode = 2
+tooltip_text = "Host a server on that IP Address on that port"
+text = "HOST SERVER"
+
+[node name="Join" type="Button" parent="PlayOptions/Container/Style"]
+layout_mode = 2
+tooltip_text = "Join that IP Address on that port"
+text = "JOIN IP"
+
+[node name="TutButtonPlay" type="TextureButton" parent="PlayOptions/Container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("6_g5vkc")
+stretch_mode = 1
+
+[node name="SettingOptions" parent="." instance=ExtResource("7_ncqyr")]
+layout_mode = 1
+
+[node name="TutButtonMenu" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 128.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("6_g5vkc")
+stretch_mode = 1
+
+[node name="TutPanel" type="PopupPanel" parent="."]
+initial_position = 1
+size = Vector2i(567, 1988)
+content_scale_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TutPanel"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 563.0
+offset_bottom = 1984.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="TutPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 22
+text = "You phase into a strange and dark place, its purpose to violate your perception of reality.
+alien energies whirl around inside you with every step you attempt to conceive.
+and as your resolve begins to falter, From the tar-black fog infront of you steps out a robed figure...
+ with a funny afro and glasses fit for an old lady. 
+She seems wise. would you like to ask for her guidance? "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TutPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="TutPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "No"
+
+[node name="Button2" type="Button" parent="TutPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Yes"
+
+[connection signal="button_up" from="PlayButton" to="." method="_on_play_button_button_up"]
+[connection signal="button_up" from="QuitButton" to="." method="_on_quit_button_button_up"]
+[connection signal="button_up" from="UserButton" to="." method="_on_user_button_button_up"]
+[connection signal="button_up" from="SettingsButton" to="." method="_on_settings_button_button_up"]
+[connection signal="button_up" from="PlayOptions/Container/Close" to="." method="_on_player_close_button_up"]
+[connection signal="drag_ended" from="PlayOptions/Container/BoxAmountSlider" to="." method="_on_box_amount_changed"]
+[connection signal="item_selected" from="PlayOptions/Container/PlayerCountOptions" to="." method="_on_player_count_options_item_selected"]
+[connection signal="item_selected" from="PlayOptions/Container/BotCountOptions" to="." method="_on_bot_count_options_item_selected"]
+[connection signal="item_selected" from="PlayOptions/Container/Online/UpnpOptions" to="." method="_on_upnp_options_item_selected"]
+[connection signal="button_up" from="PlayOptions/Container/Style/Local" to="." method="_on_local_button_up"]
+[connection signal="button_up" from="PlayOptions/Container/Style/CPU" to="." method="_on_cpu_button_up"]
+[connection signal="button_up" from="PlayOptions/Container/Style/Host" to="." method="_on_host_button_up"]
+[connection signal="button_up" from="PlayOptions/Container/Style/Join" to="." method="_on_join_button_up"]
+[connection signal="button_up" from="PlayOptions/Container/TutButtonPlay" to="." method="_on_tut_button_play_button_up"]
+[connection signal="button_up" from="TutButtonMenu" to="." method="_on_tut_button_menu_button_up"]
+[connection signal="button_up" from="TutPanel/VBoxContainer/HBoxContainer/Button" to="." method="_on_tut_no_up"]
+[connection signal="button_up" from="TutPanel/VBoxContainer/HBoxContainer/Button2" to="." method="_on_tut_yes_up"]

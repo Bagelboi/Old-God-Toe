@@ -1,0 +1,142 @@
+[gd_scene load_steps=4 format=3 uid="uid://c66cv847tirhy"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_3pnur"]
+[ext_resource type="Script" path="res://scripts/utils/TouchScreenControls.cs" id="1_tatki"]
+[ext_resource type="Theme" uid="uid://45ijovprrtvl" path="res://resources/ui/touch_controls.tres" id="2_4e46q"]
+
+[node name="TouchControls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tatki")
+
+[node name="MoveStick" parent="." instance=ExtResource("1_3pnur")]
+modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+visibility_mode = 1
+action_left = "look_left"
+action_right = "look_right"
+action_up = "look_up"
+action_down = "look_down"
+
+[node name="LookStick" parent="." instance=ExtResource("1_3pnur")]
+modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+offset_top = -300.0
+offset_bottom = 0.0
+visibility_mode = 1
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_fwd"
+action_down = "move_bck"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -204.0
+offset_right = 286.0
+offset_bottom = -80.0
+grow_vertical = 2
+theme = ExtResource("2_4e46q")
+theme_override_constants/separation = 50
+
+[node name="Teleport" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "TELEPORT"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="GhostBack" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+
+[node name="GhostToggle" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "TOGGLE"
+
+[node name="GhostForward" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "NEXT"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -286.0
+offset_top = 20.0
+offset_bottom = 258.0
+grow_horizontal = 0
+theme = ExtResource("2_4e46q")
+theme_override_constants/separation = 90
+
+[node name="Menu" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "MENU"
+
+[node name="Confirm" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 40
+text = "CONFIRM"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -89.5
+offset_top = -88.0
+offset_right = 89.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_4e46q")
+theme_override_constants/separation = 50
+
+[node name="ButtonUp" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 44
+text = "U↑"
+
+[node name="ButtonDown" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 44
+text = "↓D"
+
+[connection signal="button_up" from="VBoxContainer/Teleport" to="." method="_on_teleport_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GhostBack" to="." method="_on_ghost_back_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GhostToggle" to="." method="_on_ghost_toggle_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GhostForward" to="." method="_on_ghost_forward_button_up"]
+[connection signal="button_up" from="VBoxContainer2/Menu" to="." method="_on_menu_button_up"]
+[connection signal="button_up" from="VBoxContainer2/Confirm" to="." method="_on_confirm_button_up"]
+[connection signal="button_down" from="HBoxContainer/ButtonUp" to="." method="_on_button_up_button_down"]
+[connection signal="button_up" from="HBoxContainer/ButtonUp" to="." method="_on_button_up_button_up"]
+[connection signal="button_down" from="HBoxContainer/ButtonDown" to="." method="_on_button_down_button_down"]
+[connection signal="button_up" from="HBoxContainer/ButtonDown" to="." method="_on_button_down_button_up"]

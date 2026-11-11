@@ -1,0 +1,6 @@
+"Welcome young one! My name is Yenna... It is very nice to meet new faces eager to abandon the time-wasters of the feeble-minded and learn the mind games of the enlightened."////2
+"For a parallel, the game you will be introduced to is like Tic-Tac-Toe, except we add a new dimension. 3D Tic-Tac-Toe simply speaking."////2
+"You can call also it "Old-God-Toe".////2
+"To get started, select Play, scroll down and select VS CPU or Local Play."//main1//2
+"Once inside, I can show you the basics if you press the Esc(ape) key or the Menu button to open up a menu and then select the Tutorial option."////2
+"In any case, take a look around and click on this knockoff version of me if you get lost. Until then..."//yennatut//2

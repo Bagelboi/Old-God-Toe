@@ -1,0 +1,168 @@
+[gd_scene load_steps=5 format=3 uid="uid://i6h3fvuoehro"]
+
+[ext_resource type="Theme" uid="uid://d1a8l161uisdy" path="res://resources/ui/menu_theme.tres" id="1_smgvo"]
+[ext_resource type="Script" path="res://scripts/objects/SettingsMenu.cs" id="2_h0q3h"]
+[ext_resource type="AudioStream" uid="uid://bhtmt881x25og" path="res://resources/audio/brogan.wav" id="3_ni6ar"]
+
+[sub_resource type="FontFile" id="FontFile_dencq"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/18/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/18/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/18/0/glyphs/0/size = Vector2(0, 0)
+cache/0/18/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/18/0/glyphs/0/texture_idx = -1
+cache/0/18/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/17/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/17/0 = Vector2(0, 0)
+
+[node name="SettingOptions" type="ScrollContainer"]
+visible = false
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.09
+anchor_top = 0.066
+anchor_right = 0.89
+anchor_bottom = 0.915
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_smgvo")
+script = ExtResource("2_h0q3h")
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="Close" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "X"
+
+[node name="Label3" type="Label" parent="Container"]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Container"]
+layout_mode = 2
+text = "volume"
+
+[node name="VolumeSlider" type="HSlider" parent="Container"]
+layout_mode = 2
+value = 100.0
+
+[node name="Test" type="AudioStreamPlayer" parent="Container/VolumeSlider"]
+stream = ExtResource("3_ni6ar")
+
+[node name="HidePlyButton" type="CheckButton" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Hide
+players"
+
+[node name="HideTouchControlsButton" type="CheckButton" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Hide
+Touch controls"
+
+[node name="ColorButton" type="CheckButton" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_text = "Customize colors"
+text = "Custom 
+Colors"
+
+[node name="Colors" type="VBoxContainer" parent="Container"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Container/Colors"]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+text = "Box Color"
+horizontal_alignment = 1
+
+[node name="BoxPicker" type="ColorPicker" parent="Container/Colors"]
+layout_mode = 2
+color_mode = 1
+deferred_mode = true
+picker_shape = 2
+
+[node name="Label4" type="Label" parent="Container/Colors"]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+text = "Skybox Color"
+horizontal_alignment = 1
+
+[node name="SkyboxPicker" type="ColorPicker" parent="Container/Colors"]
+layout_mode = 2
+edit_alpha = false
+color_mode = 1
+deferred_mode = true
+picker_shape = 2
+
+[node name="Label5" type="Label" parent="Container/Colors"]
+layout_mode = 2
+theme_override_constants/outline_size = 3
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Container"]
+layout_mode = 2
+text = "CONTROLS"
+
+[node name="Keybinds" type="Label" parent="Container"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontFile_dencq")
+theme_override_font_sizes/font_size = 18
+text = "W - MOVE FORWARD
+A - MOVE LEFT
+D - MOVE RIGHT
+S - MOVE BACK
+ARROW KEYS - MOVE CAMERA
+CTRL - MOVE DOWN
+SPACE - MOVE UP
+LEFT MOUSE - SELECT BOX
+ENTER - CONFIRM SELECTION
+TAB - RELEASE CURSOR
+X - TOGGLE POSSIBLE PLAYS
+C - CYCLE NEXT PLAY
+Z - CYCLE LAST PLAY
+Q - TELEPORT TO SELECTED OR FORWARD
+ESC - OPEN MENU"
+
+[connection signal="button_up" from="Container/Close" to="." method="_on_close_button_up"]
+[connection signal="value_changed" from="Container/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="toggled" from="Container/HidePlyButton" to="." method="_on_hide_ply_button_toggled"]
+[connection signal="toggled" from="Container/HideTouchControlsButton" to="." method="_on_hide_touch_controls_button_toggled"]
+[connection signal="toggled" from="Container/ColorButton" to="." method="_on_color_button_toggled"]
+[connection signal="color_changed" from="Container/Colors/BoxPicker" to="." method="_on_box_picker_color_changed"]
+[connection signal="color_changed" from="Container/Colors/SkyboxPicker" to="." method="_on_skybox_picker_color_changed"]

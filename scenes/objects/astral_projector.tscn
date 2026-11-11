@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjbmt2ndbdaq4"]
+
+[ext_resource type="Script" path="res://scripts/objects/AstralProjector.cs" id="1_53u0e"]
+[ext_resource type="Theme" uid="uid://d1a8l161uisdy" path="res://resources/ui/menu_theme.tres" id="2_wbwjp"]
+
+[node name="AstralProjector" type="Node3D"]
+script = ExtResource("1_53u0e")
+
+[node name="PlayIndex" type="Label" parent="."]
+z_index = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_bottom = 20.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("2_wbwjp")
+theme_override_colors/font_outline_color = Color(0.196078, 0.0784314, 0.309804, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 18
+text = "N/A"
+horizontal_alignment = 1
+vertical_alignment = 1

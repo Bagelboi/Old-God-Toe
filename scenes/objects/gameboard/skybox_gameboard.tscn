@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://6q3vmopqkp3p"]
+
+[ext_resource type="Texture2D" uid="uid://diyags28trpym" path="res://resources/2d/skybox.png" id="1_8021g"]
+
+[sub_resource type="Gradient" id="Gradient_x422f"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0b8mq"]
+gradient = SubResource("Gradient_x422f")
+
+[sub_resource type="Shader" id="Shader_bilh3"]
+code = "
+// NOTE: Shader automatically converted from Godot Engine 4.2.1.stable.mono's PanoramaSkyMaterial.
+
+shader_type sky;
+
+uniform sampler2D source_panorama : filter_linear, source_color, hint_default_black;
+uniform vec4 albedo : source_color;
+
+void sky() {
+	COLOR = texture(source_panorama, SKY_COORDS).rgb * albedo.rgb;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p857o"]
+shader = SubResource("Shader_bilh3")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/source_panorama = ExtResource("1_8021g")
+
+[sub_resource type="Sky" id="Sky_jko66"]
+sky_material = SubResource("ShaderMaterial_p857o")
+
+[sub_resource type="Environment" id="Environment_tuyl7"]
+background_mode = 2
+background_energy_multiplier = 1.1
+sky = SubResource("Sky_jko66")
+ambient_light_source = 3
+ambient_light_color = Color(0.784314, 0.870588, 0.890196, 1)
+ambient_light_sky_contribution = 0.88
+fog_light_color = Color(1, 1, 1, 1)
+fog_sky_affect = 0.0
+adjustment_color_correction = SubResource("GradientTexture1D_0b8mq")
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_tuyl7")

@@ -1,0 +1,4 @@
+templarcross
+templarround
+templartree
+templargold

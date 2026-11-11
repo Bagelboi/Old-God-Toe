@@ -1,0 +1,4 @@
+"The first row represents the amount of boxes. So if you played on a 3x3x3 cube and then a 5x5x5 cube, there'll be a separate column for them."//office_score1//2
+"The second row represents the amount of wins against Computer-Controlled opponents for every different cube dimension. So any wins on a 3x3x3 against a CPU will be counted to the 3x3 column, while something like 5x5x5 will be counted on a 5x5 column yet to appear."//office_score2//0
+"The third row is the same as the second one except it tallies the wins against online opponents."//office_score3//2
+"The Total column represents the sum of all wins on that row."////2

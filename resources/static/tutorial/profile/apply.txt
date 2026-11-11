@@ -1,0 +1,2 @@
+"Not much to say about this one besides the fact that you can load different save slots on the Load Profile button. You can also reset your progress on Reset Profile."//office_save1//0
+"Progress is also saved when you return to the main menu."////2

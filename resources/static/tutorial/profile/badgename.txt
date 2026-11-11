@@ -1,0 +1,5 @@
+"You can set your name here."//office_name1//2
+"See how when you change it, the name plaque changes too?"//office_name2//2
+"Here you can set your clerical title."//office_name3//2
+"Of course, these titles are based on merit. You'll need X amount of wins against CPU (Computer-Controlled) opponents or X amount of wins against opponents on the Interweb."//office_name4//0
+"Here we have changed our name to "Cool" and our title to Zealot. Zealot Cool. Very cool."//office_name5//2

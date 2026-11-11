@@ -1,0 +1,5 @@
+"You can change the amount of boxes per axis with this slider, with the total being the selected number raised by the power of 3. By default you'll play on a 3x3x3 cube which totals to 27 boxes."//play1//0
+"You can also change the maximum amount of players. In an online game this is how many players have to join before the game starts."//play2//2
+"This is the minimum amount of CPU (Computer-Controlled) opponents that'll take up a player slot. They don't appear on Local Play or on online games"//play3//2
+"This is the online configuration. If you're hosting a server, you type in your IP address (if the UPNP option is turned off, otherwise the IP is automatically created) and the port you're forwarding to.\nIf you want to join your friend, you type their IP address and the open port."//play4//0
+"These are the modalities of play. Local Play is playing locally against your friends without CPU. VS CPU is to play against Computer-Controlled opponents and can be optionally played with friends. Host Server creates an online lobby with what you configured. Join IP joins an open server's IP address."//play5//0

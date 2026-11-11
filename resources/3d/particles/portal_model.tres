@@ -1,0 +1,14 @@
+[gd_resource type="QuadMesh" load_steps=3 format=3 uid="uid://375w8lq5gomj"]
+
+[ext_resource type="Texture2D" uid="uid://bbu1inuy8exsp" path="res://resources/2d/sparkle.png" id="1_f21hy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0r8ck"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_texture = ExtResource("1_f21hy")
+
+[resource]
+material = SubResource("StandardMaterial3D_0r8ck")
